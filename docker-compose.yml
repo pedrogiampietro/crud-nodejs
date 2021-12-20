@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
   database:
-    image: mysql:5.7
-    container_name: database_hati
+    image: postgres
+    container_name: database_crudnodejs
     restart: always
     ports:
       - 5432:5432
@@ -15,5 +15,5 @@ services:
       - pgdata:/data/postgres
 
 volumes:
-  mysqldata:
+  pgdata:
     driver: local
